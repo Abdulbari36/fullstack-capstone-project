@@ -1,0 +1,26 @@
+# Task 15 — cURL: log in a registered user (POST /api/auth/login)
+# Generated: 2026-09-28T14:30:32.156Z
+# Base URL:  http://localhost:8000
+
+$ curl -X POST "http://localhost:8000/api/auth/login" \
+  -H "Content-Type: application/json" \
+  -d '{"username":"testuser_1790605831821","password":"secret123"}'
+
+HTTP Status: 200
+
+{
+  "message": "Login successful",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYmE3YTA3M2U4YjM2YTQ2NTA3MWQ5NCIsInVzZXJuYW1lIjoidGVzdHVzZXJfMTc5MDYwNTgzMTgyMSIsImlhdCI6MTc5MDYwNTgzMiwiZXhwIjoxNzkxMjEwNjMyfQ.rMgUjaJIl7K9Qed4hGBWhx1GCgDQtMVmDcROscfPmbs",
+  "user": {
+    "_id": "6aba7a073e8b36a465071d94",
+    "username": "testuser_1790605831821",
+    "email": "testuser1790605831821@example.com",
+    "first_name": "Test",
+    "last_name": "User",
+    "location": "Austin, TX",
+    "bio": "",
+    "avatar_url": "",
+    "createdAt": "2026-09-28T14:30:31.983Z",
+    "updatedAt": "2026-09-28T14:30:31.983Z"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "giftlink-sentiment",
+  "version": "1.0.0",
+  "description": "Sentiment analysis microservice for GiftLink comments using the natural npm package",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "analyze": "node index.js"
+  },
+  "dependencies": {
+    "natural": "^8.0.1"
+  }
+}

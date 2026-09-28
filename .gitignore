@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+
+# Builds
+frontend/build/
+dist/
+
+# Env
+.env
+.env.local
+*.env
+
+# Data / outputs that shouldn't be committed accidentally
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/

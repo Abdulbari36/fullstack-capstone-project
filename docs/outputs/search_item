@@ -1,0 +1,62 @@
+# Task 17 — cURL: items matching search criteria (GET /api/search)
+# Generated: 2026-09-28T14:30:32.181Z
+# Base URL:  http://localhost:8000
+
+$ curl -X GET "http://localhost:8000/api/search?q=wooden"
+
+HTTP Status: 200
+
+{
+  "query": {
+    "q": "wooden"
+  },
+  "filter": {
+    "$or": [
+      {
+        "name": {
+          "$regex": "wooden",
+          "$options": "i"
+        }
+      },
+      {
+        "description": {
+          "$regex": "wooden",
+          "$options": "i"
+        }
+      }
+    ]
+  },
+  "total": 2,
+  "page": 1,
+  "count": 2,
+  "results": [
+    {
+      "_id": "6aba79fa3e8b36a465071d88",
+      "name": "Wooden Train Set",
+      "description": "Fifty-piece wooden railway with bridges and trains, compatible with major brands.",
+      "category": "Toys",
+      "condition": "Good",
+      "image_url": "",
+      "location": "Round Rock, TX",
+      "status": "Available",
+      "comments": [],
+      "__v": 0,
+      "createdAt": "2026-09-28T14:30:18.561Z",
+      "updatedAt": "2026-09-28T14:30:18.561Z"
+    },
+    {
+      "_id": "6aba79fa3e8b36a465071d7d",
+      "name": "Wooden Dining Table",
+      "description": "Solid oak dining table, seats six. A few light scratches on the surface but very sturdy.",
+      "category": "Furniture",
+      "condition": "Good",
+      "image_url": "",
+      "location": "Austin, TX",
+      "status": "Available",
+      "comments": [],
+      "__v": 0,
+      "createdAt": "2026-09-28T14:30:18.559Z",
+      "updatedAt": "2026-09-28T14:30:18.559Z"
+    }
+  ]
+}

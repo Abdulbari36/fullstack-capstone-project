@@ -1,0 +1,265 @@
+# Task 3 — MongoDB output: documents imported (inserted_items)
+# Generated: 2026-09-28T14:30:32.193Z
+# Base URL:  http://localhost:8000
+
+Inserted 16 documents into giftlink.gifts
+
+db.gifts.find() → 16 documents:
+
+Document 1:
+{
+  "_id": "6aba79fa3e8b36a465071d84",
+  "name": "Baby Clothes Bundle 0-6m",
+  "description": "Twenty-plus onesies, sleepers and hats for ages 0-6 months, all laundered.",
+  "category": "Clothing",
+  "condition": "Good",
+  "image_url": "",
+  "location": "Pflugerville, TX",
+  "status": "Available",
+  "comments": [],
+  "__v": 0,
+  "createdAt": "2026-09-28T14:30:18.561Z",
+  "updatedAt": "2026-09-28T14:30:18.561Z"
+}
+
+Document 2:
+{
+  "_id": "6aba79fa3e8b36a465071d85",
+  "name": "Introduction to Algorithms (CLRS)",
+  "description": "Third edition hardcover. Light highlighting in the first four chapters.",
+  "category": "Books",
+  "condition": "Good",
+  "image_url": "",
+  "location": "Austin, TX",
+  "status": "Available",
+  "comments": [],
+  "__v": 0,
+  "createdAt": "2026-09-28T14:30:18.561Z",
+  "updatedAt": "2026-09-28T14:30:18.561Z"
+}
+
+Document 3:
+{
+  "_id": "6aba79fa3e8b36a465071d86",
+  "name": "Clean Code by Robert Martin",
+  "description": "Paperback, like new. A must-read for every software developer.",
+  "category": "Books",
+  "condition": "Like New",
+  "image_url": "",
+  "location": "Georgetown, TX",
+  "status": "Available",
+  "comments": [],
+  "__v": 0,
+  "createdAt": "2026-09-28T14:30:18.561Z",
+  "updatedAt": "2026-09-28T14:30:18.561Z"
+}
+
+Document 4:
+{
+  "_id": "6aba79fa3e8b36a465071d87",
+  "name": "LEGO Classic Creative Bricks",
+  "description": "Large box of assorted LEGO bricks, includes idea booklet. Complete set.",
+  "category": "Toys",
+  "condition": "Good",
+  "image_url": "",
+  "location": "Austin, TX",
+  "status": "Available",
+  "comments": [],
+  "__v": 0,
+  "createdAt": "2026-09-28T14:30:18.561Z",
+  "updatedAt": "2026-09-28T14:30:18.561Z"
+}
+
+Document 5:
+{
+  "_id": "6aba79fa3e8b36a465071d88",
+  "name": "Wooden Train Set",
+  "description": "Fifty-piece wooden railway with bridges and trains, compatible with major brands.",
+  "category": "Toys",
+  "condition": "Good",
+  "image_url": "",
+  "location": "Round Rock, TX",
+  "status": "Available",
+  "comments": [],
+  "__v": 0,
+  "createdAt": "2026-09-28T14:30:18.561Z",
+  "updatedAt": "2026-09-28T14:30:18.561Z"
+}
+
+Document 6:
+{
+  "_id": "6aba79fa3e8b36a465071d89",
+  "name": "KitchenAid Stand Mixer",
+  "description": "Artisan 5-quart tilt-head stand mixer in empire red with dough hook and whisk.",
+  "category": "Kitchen",
+  "condition": "Good",
+  "image_url": "",
+  "location": "Austin, TX",
+  "status": "Available",
+  "comments": [],
+  "__v": 0,
+  "createdAt": "2026-09-28T14:30:18.561Z",
+  "updatedAt": "2026-09-28T14:30:18.561Z"
+}
+
+Document 7:
+{
+  "_id": "6aba79fa3e8b36a465071d8a",
+  "name": "Cast Iron Skillet Set",
+  "description": "Three pre-seasoned cast iron skillets (8, 10, 12 inch) with silicone handles.",
+  "category": "Kitchen",
+  "condition": "Good",
+  "image_url": "",
+  "location": "Cedar Park, TX",
+  "status": "Available",
+  "comments": [],
+  "__v": 0,
+  "createdAt": "2026-09-28T14:30:18.561Z",
+  "updatedAt": "2026-09-28T14:30:18.561Z"
+}
+
+Document 8:
+{
+  "_id": "6aba79fa3e8b36a465071d8b",
+  "name": "Yoga Mat and Blocks",
+  "description": "Six-millimeter yoga mat with two foam blocks and a carrying strap.",
+  "category": "Sports",
+  "condition": "Like New",
+  "image_url": "",
+  "location": "Austin, TX",
+  "status": "Available",
+  "comments": [],
+  "__v": 0,
+  "createdAt": "2026-09-28T14:30:18.561Z",
+  "updatedAt": "2026-09-28T14:30:18.561Z"
+}
+
+Document 9:
+{
+  "_id": "6aba79fa3e8b36a465071d8c",
+  "name": "Mountain Bike - Adult 26\"",
+  "description": "Hardtail mountain bike, 21 speeds, new tires and chain. Rides smoothly.",
+  "category": "Sports",
+  "condition": "Used",
+  "image_url": "",
+  "location": "Austin, TX",
+  "status": "Available",
+  "comments": [],
+  "__v": 0,
+  "createdAt": "2026-09-28T14:30:18.561Z",
+  "updatedAt": "2026-09-28T14:30:18.561Z"
+}
+
+Document 10:
+{
+  "_id": "6aba79fa3e8b36a465071d7e",
+  "name": "Leather Sectional Sofa",
+  "description": "Three-piece brown leather sectional with cushions. Cleaned and ready for pickup.",
+  "category": "Furniture",
+  "condition": "Good",
+  "image_url": "",
+  "location": "Austin, TX",
+  "status": "Available",
+  "comments": [],
+  "__v": 0,
+  "createdAt": "2026-09-28T14:30:18.560Z",
+  "updatedAt": "2026-09-28T14:30:18.560Z"
+}
+
+Document 11:
+{
+  "_id": "6aba79fa3e8b36a465071d7f",
+  "name": "Standing Desk",
+  "description": "Height-adjustable standing desk, electric motor, minor wear on desktop.",
+  "category": "Furniture",
+  "condition": "Like New",
+  "image_url": "",
+  "location": "Round Rock, TX",
+  "status": "Available",
+  "comments": [],
+  "__v": 0,
+  "createdAt": "2026-09-28T14:30:18.560Z",
+  "updatedAt": "2026-09-28T14:30:18.560Z"
+}
+
+Document 12:
+{
+  "_id": "6aba79fa3e8b36a465071d80",
+  "name": "Samsung 43\" 4K TV",
+  "description": "43-inch 4K UHD smart TV with remote. Works perfectly, no dead pixels.",
+  "category": "Electronics",
+  "condition": "Like New",
+  "image_url": "",
+  "location": "Austin, TX",
+  "status": "Available",
+  "comments": [],
+  "__v": 0,
+  "createdAt": "2026-09-28T14:30:18.560Z",
+  "updatedAt": "2026-09-28T14:30:18.560Z"
+}
+
+Document 13:
+{
+  "_id": "6aba79fa3e8b36a465071d81",
+  "name": "Sony Wireless Headphones",
+  "description": "Noise-cancelling over-ear headphones. Includes carrying case and USB-C cable.",
+  "category": "Electronics",
+  "condition": "Good",
+  "image_url": "",
+  "location": "Cedar Park, TX",
+  "status": "Available",
+  "comments": [],
+  "__v": 0,
+  "createdAt": "2026-09-28T14:30:18.560Z",
+  "updatedAt": "2026-09-28T14:30:18.560Z"
+}
+
+Document 14:
+{
+  "_id": "6aba79fa3e8b36a465071d82",
+  "name": "Nintendo Switch Lite",
+  "description": "Coral Switch Lite with charger. Screen protector applied since day one.",
+  "category": "Electronics",
+  "condition": "Good",
+  "image_url": "",
+  "location": "Austin, TX",
+  "status": "Available",
+  "comments": [],
+  "__v": 0,
+  "createdAt": "2026-09-28T14:30:18.560Z",
+  "updatedAt": "2026-09-28T14:30:18.560Z"
+}
+
+Document 15:
+{
+  "_id": "6aba79fa3e8b36a465071d83",
+  "name": "Winter Jacket - Men L",
+  "description": "Waterproof insulated winter jacket, dark green, barely worn.",
+  "category": "Clothing",
+  "condition": "Like New",
+  "image_url": "",
+  "location": "Austin, TX",
+  "status": "Available",
+  "comments": [],
+  "__v": 0,
+  "createdAt": "2026-09-28T14:30:18.560Z",
+  "updatedAt": "2026-09-28T14:30:18.560Z"
+}
+
+Document 16:
+{
+  "_id": "6aba79fa3e8b36a465071d7d",
+  "name": "Wooden Dining Table",
+  "description": "Solid oak dining table, seats six. A few light scratches on the surface but very sturdy.",
+  "category": "Furniture",
+  "condition": "Good",
+  "image_url": "",
+  "location": "Austin, TX",
+  "status": "Available",
+  "comments": [],
+  "__v": 0,
+  "createdAt": "2026-09-28T14:30:18.559Z",
+  "updatedAt": "2026-09-28T14:30:18.559Z"
+}
+
+Total documents in collection: 16
