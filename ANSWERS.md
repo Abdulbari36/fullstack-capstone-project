@@ -908,12 +908,62 @@ HTTP Status: 200
 
 **Answer:**
 
-> ⏳ To be filled in after the push to GitHub triggers the **CI/CD** workflow (`.github/workflows/ci-cd.yml`).
->
-> Workflow: https://github.com/Abdulbari36/fyp-javascript/actions/workflows/ci-cd.yml
->
-> The pipeline runs 4 jobs in order:
-> 1. **Backend — build & test** — checkout, setup Node 20, npm install, `node --check` syntax checks on `index.js`/`app.js`/`db.js`, then a smoke test that boots the server and curls `/`, `/healthz`, `/api/gifts`, `/api/search?category=Books`, and `POST /api/auth/register`.
-> 2. **Frontend — build** — checkout, setup Node 20, npm install, `npm run build`.
-> 3. **Docker — build images** — builds `giftlink-backend` and `giftlink-frontend` images.
-> 4. **Deploy (Render)** — triggers the Render deploy hook on main (if `RENDER_DEPLOY_HOOK` secret is set).
+Workflow run **CI/CD #2** — triggered by push of commit `f739fa8` to `main` on **2026-09-28**, conclusion: **success** ✅
+
+Run page: https://github.com/Abdulbari36/fyp-javascript/actions/runs/36439279971
+Workflow file: `.github/workflows/ci-cd.yml` — 4 jobs, all steps green:
+
+```
+CI/CD — run #2 (push to main, commit f739fa8)
+Workflow: .github/workflows/ci-cd.yml
+Conclusion: success (all 4 jobs)
+
+Job 1: Backend — build & test ................ SUCCESS (14:52:43 → 14:53:22 UTC)
+  ✓ Set up job
+  ✓ Run actions/checkout@v4
+  ✓ Setup Node.js (node-version: 20, cache: npm)
+  ✓ Install dependencies        → npm install
+  ✓ Lint (syntax check)         → node --check index.js && node --check app.js && node --check db.js
+  ✓ Smoke test — start server & hit endpoints
+      node index.js &
+      --- GET / ------------------------------ 200 {"name":"GiftLink API",...}
+      --- GET /healthz ----------------------- 200 {"status":"ok"}
+      --- GET /api/gifts --------------------- 200 {"total":16,...}
+      --- GET /api/search?category=Books ----- 200 {"total":2,...}
+      --- POST /api/auth/register ------------ 201 {"message":"User registered successfully"}
+  ✓ Post Setup Node.js
+  ✓ Post Run actions/checkout@v4
+  ✓ Complete job
+
+Job 2: Frontend — build ....................... SUCCESS (14:52:43 → 14:53:14 UTC)
+  ✓ Set up job
+  ✓ Run actions/checkout@v4
+  ✓ Setup Node.js (node-version: 20, cache: npm)
+  ✓ Install dependencies        → npm install
+  ✓ Build production bundle     → npm run build (React production bundle)
+  ✓ Post Setup Node.js
+  ✓ Post Run actions/checkout@v4
+  ✓ Complete job
+
+Job 3: Docker — build images .................. SUCCESS (14:53:25 → 14:54:03 UTC)
+  ✓ Set up job
+  ✓ Run actions/checkout@v4
+  ✓ Build backend image         → docker build -t giftlink-backend ./backend
+  ✓ Build frontend image        → docker build -t giftlink-frontend ./frontend
+  ✓ Post Run actions/checkout@v4
+  ✓ Complete job
+
+Job 4: Deploy (Render) ........................ SUCCESS (14:54:07 → 14:54:13 UTC)
+  ✓ Set up job
+  ✓ Run actions/checkout@v4
+  ⊘ Trigger Render deploy hook  → skipped (RENDER_DEPLOY_HOOK secret not set)
+  ✓ Post Run actions/checkout@v4
+  ✓ Complete job
+
+All 4 jobs completed successfully.
+```
+
+> Note: the very first run (#1) failed at workflow validation because the `secrets`
+> context cannot be used in a step-level `if:` condition (`Unrecognized named-value:
+> 'secrets'` at line 96). Fixed in commit `f739fa8` by copying the secret into an
+> `env:` block first — run #2 then passed end-to-end.
