@@ -1,23 +1,22 @@
 # Task 16 — cURL: details of an item (GET /api/gifts/:id)
-# Generated: 2026-09-28T14:30:32.168Z
+# Generated: 2026-09-28T15:43:02.870Z
 # Base URL:  http://localhost:8000
 
-$ curl -X GET "http://localhost:8000/api/gifts/6aba79fa3e8b36a465071d84" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYmE3YTA3M2U4YjM2YTQ2NTA3MWQ5NCIsInVzZXJuYW1lIjoidGVzdHVzZXJfMTc5MDYwNTgzMTgyMSIsImlhdCI6MTc5MDYwNTgzMiwiZXhwIjoxNzkxMjEwNjMyfQ.rMgUjaJIl7K9Qed4hGBWhx1GCgDQtMVmDcROscfPmbs"
+$ curl -X GET "http://localhost:8000/api/gifts/6aba8af68080a8f227526afa" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYmE4YjA2ODBkNWMzODliNTAwNzc0MSIsInVzZXJuYW1lIjoidGVzdHVzZXJfMTc5MDYxMDE4MjU1MiIsImlhdCI6MTc5MDYxMDE4MiwiZXhwIjoxNzkxMjE0OTgyfQ.yqCPhUcGrZPOrooNqJpqadk8vNyu1PCJjuyrqh57FqM"
 
 HTTP Status: 200
 
 {
-  "_id": "6aba79fa3e8b36a465071d84",
-  "name": "Baby Clothes Bundle 0-6m",
-  "description": "Twenty-plus onesies, sleepers and hats for ages 0-6 months, all laundered.",
-  "category": "Clothing",
+  "_id": "6aba8af68080a8f227526afa",
+  "name": "Wooden Dining Table",
+  "description": "Solid oak dining table, seats six. A few light scratches on the surface but very sturdy.",
+  "category": "Furniture",
   "condition": "Good",
+  "location": "Austin, TX",
   "image_url": "",
-  "location": "Pflugerville, TX",
   "status": "Available",
   "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.561Z",
-  "updatedAt": "2026-09-28T14:30:18.561Z"
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
 }

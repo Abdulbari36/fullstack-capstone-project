@@ -11,7 +11,7 @@ with users who prefer to **recycle or find free items** instead of buying new.
 
 ```
 fullstack-capstone-project/
-├── backend/                  # Express API
+├── giftlink-backend/         # Express API
 │   ├── index.js              # Entry point — imports `natural` (Task 8)
 │   ├── app.js                # Express app — serves /api/search (Task 7)
 │   ├── db.js                 # MongoDB connection with await client.connect() (Task 4)
@@ -42,7 +42,7 @@ fullstack-capstone-project/
 ### Option A — zero setup (in-memory MongoDB)
 
 ```bash
-cd backend && npm install && npm start
+cd giftlink-backend && npm install && npm start
 # API on http://localhost:8000 — MongoDB runs in-memory, 16 items auto-seeded
 ```
 
@@ -63,7 +63,7 @@ docker compose up --build
 ### Seeding a real MongoDB
 
 ```bash
-cd backend
+cd giftlink-backend
 MONGODB_URI="mongodb://127.0.0.1:27017" npm run seed
 # → "Inserted 16 documents into giftlink.gifts"
 ```
@@ -92,7 +92,7 @@ MongoDB operators so concurrent writes never lose data.
 
 1. Push this repo to GitHub as **fullstack-capstone-project**.
 2. Create a free **MongoDB Atlas** cluster → copy the connection string.
-3. Deploy the backend on **Render** (Web Service, root dir `backend`):
+3. Deploy the backend on **Render** (Web Service, root dir `giftlink-backend`):
    - Build: `npm install` · Start: `npm start`
    - Env vars: `MONGODB_URI`, `JWT_SECRET`, `SEED_ON_START=true`
 4. Deploy the frontend (Static Site, root dir `frontend`):

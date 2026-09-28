@@ -1,6 +1,6 @@
 # Full Stack Capstone — Assignment Answers
 
-**Repository:** https://github.com/Abdulbari36/fyp-javascript
+**Repository:** https://github.com/Abdulbari36/fullstack-capstone-project
 **Project:** GiftLink — Full Stack Capstone Project
 
 ---
@@ -10,300 +10,319 @@
 **Answer:**
 
 ```
-https://github.com/Abdulbari36/fyp-javascript/blob/main/docs/user-story.md
+https://github.com/Abdulbari36/fullstack-capstone-project/blob/main/docs/user-story.md
 ```
 
-The file contains the user story template (Title / As a… I want… so that… / Acceptance Criteria / Priority / Label / Story Points) plus 9 filled-in user stories.
+The file contains the full user story template in the required format:
+
+```
+Title: [Short descriptive title]
+
+As a [type of user],
+I want [goal / need],
+so that [reason / benefit].
+
+Details and Assumptions:
+* [Context, constraints, or facts we assume to be true]
+
+Acceptance Criteria (Gherkin):
+1. Given [context], When [action], Then [outcome]
+
+Priority / Label / Story Points
+```
+
+Every story (US1–US9) includes a **Details and Assumptions** section and **acceptance
+criteria written in Gherkin syntax** (`Given [context], When [action], Then [outcome]`).
 
 ---
 
 ## Question 2 — Task 2 (4 pts): Upload `userstories.png` — GitHub Issues screenshot
 
-**Deliverable:** `userstories.png` (screenshot — must be taken manually, see below)
+**Deliverable:** `userstories.png` (screenshot — must be taken manually)
 
-The screenshot must show the repository name **fullstack-capstone-project** and at least eight user stories labeled `new`, `icebox`, `technical debt`, or `backlog`.
+The repository has already been renamed to **fullstack-capstone-project** ✅, so the
+screenshot will show the required repo name.
 
-**How to capture it:**
+**Remaining steps to capture it:**
 
-1. Push this repo to GitHub (public).
-2. Go to **Issues → New issue** and create the user stories listed in `docs/github-issues.md` (US1–US10), using the body text from `docs/user-story.md`.
-3. Create the four labels under **Issues → Labels → New label**: `new`, `icebox`, `technical debt`, `backlog` — and attach them to the issues as listed.
-4. Open the **Issues** tab so the repository name and all labeled issues are visible in one screen.
-5. Take a full-window screenshot and save it as **userstories.png**.
-
-> ⚠️ **Note:** This repo is named `fyp-javascript`, but Task 2 requires the screenshot to show the repo name "fullstack-capstone-project". Either rename the GitHub repository to `fullstack-capstone-project` (Settings → General → Repository name), or create a new repo with that name and push this code there before taking the screenshot.
+1. Open **Issues → New issue** and create the user stories US1–US10 (titles and bodies from `docs/user-story.md` / the list in `docs/github-issues.md`).
+2. Create the four labels under **Issues → Labels → New label**: `new`, `icebox`, `technical debt`, `backlog` — attach them as listed (US1–US5 = `new`, US6–US7 = `backlog`, US8 = `technical debt`, US9 = `icebox`, US10 = `backlog`).
+3. Open the **Issues** tab so the repository name **fullstack-capstone-project** and all ≥8 labeled issues are visible in one screen.
+4. Take a full-window screenshot and save it as **userstories.png**.
 
 ---
 
 ## Question 3 — Task 3 (2 pts): Terminal output of MongoDB data saved as `inserted_items` (16 documents)
 
-**Answer:**
+**Answer** — the `npm start` command run from `giftlink-backend/util/import-mongo`
+(the import utility lives in the `giftlink-backend/util/import-mongo` folder):
+
+```bash
+cd giftlink-backend/util/import-mongo
+npm start
+```
+
+Terminal output:
 
 ```
+> import-mongo@1.0.0 start
+> node import.js
+
+Starting GiftLink MongoDB import...
+Target: mongodb://127.0.0.1:27017 → database "giftlink", collection "gifts"
+Connected to MongoDB.
 Inserted 16 documents into giftlink.gifts
+Verification: db.gifts.countDocuments() → 16
 
 db.gifts.find() → 16 documents:
 
 Document 1:
 {
-  "_id": "6aba79fa3e8b36a465071d84",
-  "name": "Baby Clothes Bundle 0-6m",
-  "description": "Twenty-plus onesies, sleepers and hats for ages 0-6 months, all laundered.",
-  "category": "Clothing",
-  "condition": "Good",
-  "image_url": "",
-  "location": "Pflugerville, TX",
-  "status": "Available",
-  "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.561Z",
-  "updatedAt": "2026-09-28T14:30:18.561Z"
-}
-
-Document 2:
-{
-  "_id": "6aba79fa3e8b36a465071d85",
-  "name": "Introduction to Algorithms (CLRS)",
-  "description": "Third edition hardcover. Light highlighting in the first four chapters.",
-  "category": "Books",
-  "condition": "Good",
-  "image_url": "",
-  "location": "Austin, TX",
-  "status": "Available",
-  "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.561Z",
-  "updatedAt": "2026-09-28T14:30:18.561Z"
-}
-
-Document 3:
-{
-  "_id": "6aba79fa3e8b36a465071d86",
-  "name": "Clean Code by Robert Martin",
-  "description": "Paperback, like new. A must-read for every software developer.",
-  "category": "Books",
-  "condition": "Like New",
-  "image_url": "",
-  "location": "Georgetown, TX",
-  "status": "Available",
-  "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.561Z",
-  "updatedAt": "2026-09-28T14:30:18.561Z"
-}
-
-Document 4:
-{
-  "_id": "6aba79fa3e8b36a465071d87",
-  "name": "LEGO Classic Creative Bricks",
-  "description": "Large box of assorted LEGO bricks, includes idea booklet. Complete set.",
-  "category": "Toys",
-  "condition": "Good",
-  "image_url": "",
-  "location": "Austin, TX",
-  "status": "Available",
-  "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.561Z",
-  "updatedAt": "2026-09-28T14:30:18.561Z"
-}
-
-Document 5:
-{
-  "_id": "6aba79fa3e8b36a465071d88",
-  "name": "Wooden Train Set",
-  "description": "Fifty-piece wooden railway with bridges and trains, compatible with major brands.",
-  "category": "Toys",
-  "condition": "Good",
-  "image_url": "",
-  "location": "Round Rock, TX",
-  "status": "Available",
-  "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.561Z",
-  "updatedAt": "2026-09-28T14:30:18.561Z"
-}
-
-Document 6:
-{
-  "_id": "6aba79fa3e8b36a465071d89",
-  "name": "KitchenAid Stand Mixer",
-  "description": "Artisan 5-quart tilt-head stand mixer in empire red with dough hook and whisk.",
-  "category": "Kitchen",
-  "condition": "Good",
-  "image_url": "",
-  "location": "Austin, TX",
-  "status": "Available",
-  "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.561Z",
-  "updatedAt": "2026-09-28T14:30:18.561Z"
-}
-
-Document 7:
-{
-  "_id": "6aba79fa3e8b36a465071d8a",
-  "name": "Cast Iron Skillet Set",
-  "description": "Three pre-seasoned cast iron skillets (8, 10, 12 inch) with silicone handles.",
-  "category": "Kitchen",
-  "condition": "Good",
-  "image_url": "",
-  "location": "Cedar Park, TX",
-  "status": "Available",
-  "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.561Z",
-  "updatedAt": "2026-09-28T14:30:18.561Z"
-}
-
-Document 8:
-{
-  "_id": "6aba79fa3e8b36a465071d8b",
-  "name": "Yoga Mat and Blocks",
-  "description": "Six-millimeter yoga mat with two foam blocks and a carrying strap.",
-  "category": "Sports",
-  "condition": "Like New",
-  "image_url": "",
-  "location": "Austin, TX",
-  "status": "Available",
-  "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.561Z",
-  "updatedAt": "2026-09-28T14:30:18.561Z"
-}
-
-Document 9:
-{
-  "_id": "6aba79fa3e8b36a465071d8c",
-  "name": "Mountain Bike - Adult 26\"",
-  "description": "Hardtail mountain bike, 21 speeds, new tires and chain. Rides smoothly.",
-  "category": "Sports",
-  "condition": "Used",
-  "image_url": "",
-  "location": "Austin, TX",
-  "status": "Available",
-  "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.561Z",
-  "updatedAt": "2026-09-28T14:30:18.561Z"
-}
-
-Document 10:
-{
-  "_id": "6aba79fa3e8b36a465071d7e",
-  "name": "Leather Sectional Sofa",
-  "description": "Three-piece brown leather sectional with cushions. Cleaned and ready for pickup.",
-  "category": "Furniture",
-  "condition": "Good",
-  "image_url": "",
-  "location": "Austin, TX",
-  "status": "Available",
-  "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.560Z",
-  "updatedAt": "2026-09-28T14:30:18.560Z"
-}
-
-Document 11:
-{
-  "_id": "6aba79fa3e8b36a465071d7f",
-  "name": "Standing Desk",
-  "description": "Height-adjustable standing desk, electric motor, minor wear on desktop.",
-  "category": "Furniture",
-  "condition": "Like New",
-  "image_url": "",
-  "location": "Round Rock, TX",
-  "status": "Available",
-  "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.560Z",
-  "updatedAt": "2026-09-28T14:30:18.560Z"
-}
-
-Document 12:
-{
-  "_id": "6aba79fa3e8b36a465071d80",
-  "name": "Samsung 43\" 4K TV",
-  "description": "43-inch 4K UHD smart TV with remote. Works perfectly, no dead pixels.",
-  "category": "Electronics",
-  "condition": "Like New",
-  "image_url": "",
-  "location": "Austin, TX",
-  "status": "Available",
-  "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.560Z",
-  "updatedAt": "2026-09-28T14:30:18.560Z"
-}
-
-Document 13:
-{
-  "_id": "6aba79fa3e8b36a465071d81",
-  "name": "Sony Wireless Headphones",
-  "description": "Noise-cancelling over-ear headphones. Includes carrying case and USB-C cable.",
-  "category": "Electronics",
-  "condition": "Good",
-  "image_url": "",
-  "location": "Cedar Park, TX",
-  "status": "Available",
-  "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.560Z",
-  "updatedAt": "2026-09-28T14:30:18.560Z"
-}
-
-Document 14:
-{
-  "_id": "6aba79fa3e8b36a465071d82",
-  "name": "Nintendo Switch Lite",
-  "description": "Coral Switch Lite with charger. Screen protector applied since day one.",
-  "category": "Electronics",
-  "condition": "Good",
-  "image_url": "",
-  "location": "Austin, TX",
-  "status": "Available",
-  "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.560Z",
-  "updatedAt": "2026-09-28T14:30:18.560Z"
-}
-
-Document 15:
-{
-  "_id": "6aba79fa3e8b36a465071d83",
-  "name": "Winter Jacket - Men L",
-  "description": "Waterproof insulated winter jacket, dark green, barely worn.",
-  "category": "Clothing",
-  "condition": "Like New",
-  "image_url": "",
-  "location": "Austin, TX",
-  "status": "Available",
-  "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.560Z",
-  "updatedAt": "2026-09-28T14:30:18.560Z"
-}
-
-Document 16:
-{
-  "_id": "6aba79fa3e8b36a465071d7d",
+  "_id": "6aba8af68080a8f227526afa",
   "name": "Wooden Dining Table",
   "description": "Solid oak dining table, seats six. A few light scratches on the surface but very sturdy.",
   "category": "Furniture",
   "condition": "Good",
-  "image_url": "",
   "location": "Austin, TX",
+  "image_url": "",
   "status": "Available",
   "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.559Z",
-  "updatedAt": "2026-09-28T14:30:18.559Z"
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
+}
+
+Document 2:
+{
+  "_id": "6aba8af68080a8f227526afb",
+  "name": "Leather Sectional Sofa",
+  "description": "Three-piece brown leather sectional with cushions. Cleaned and ready for pickup.",
+  "category": "Furniture",
+  "condition": "Good",
+  "location": "Austin, TX",
+  "image_url": "",
+  "status": "Available",
+  "comments": [],
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
+}
+
+Document 3:
+{
+  "_id": "6aba8af68080a8f227526afc",
+  "name": "Standing Desk",
+  "description": "Height-adjustable standing desk, electric motor, minor wear on desktop.",
+  "category": "Furniture",
+  "condition": "Like New",
+  "location": "Round Rock, TX",
+  "image_url": "",
+  "status": "Available",
+  "comments": [],
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
+}
+
+Document 4:
+{
+  "_id": "6aba8af68080a8f227526afd",
+  "name": "Samsung 43\" 4K TV",
+  "description": "43-inch 4K UHD smart TV with remote. Works perfectly, no dead pixels.",
+  "category": "Electronics",
+  "condition": "Like New",
+  "location": "Austin, TX",
+  "image_url": "",
+  "status": "Available",
+  "comments": [],
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
+}
+
+Document 5:
+{
+  "_id": "6aba8af68080a8f227526afe",
+  "name": "Sony Wireless Headphones",
+  "description": "Noise-cancelling over-ear headphones. Includes carrying case and USB-C cable.",
+  "category": "Electronics",
+  "condition": "Good",
+  "location": "Cedar Park, TX",
+  "image_url": "",
+  "status": "Available",
+  "comments": [],
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
+}
+
+Document 6:
+{
+  "_id": "6aba8af68080a8f227526aff",
+  "name": "Nintendo Switch Lite",
+  "description": "Coral Switch Lite with charger. Screen protector applied since day one.",
+  "category": "Electronics",
+  "condition": "Good",
+  "location": "Austin, TX",
+  "image_url": "",
+  "status": "Available",
+  "comments": [],
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
+}
+
+Document 7:
+{
+  "_id": "6aba8af68080a8f227526b00",
+  "name": "Winter Jacket - Men L",
+  "description": "Waterproof insulated winter jacket, dark green, barely worn.",
+  "category": "Clothing",
+  "condition": "Like New",
+  "location": "Austin, TX",
+  "image_url": "",
+  "status": "Available",
+  "comments": [],
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
+}
+
+Document 8:
+{
+  "_id": "6aba8af68080a8f227526b01",
+  "name": "Baby Clothes Bundle 0-6m",
+  "description": "Twenty-plus onesies, sleepers and hats for ages 0-6 months, all laundered.",
+  "category": "Clothing",
+  "condition": "Good",
+  "location": "Pflugerville, TX",
+  "image_url": "",
+  "status": "Available",
+  "comments": [],
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
+}
+
+Document 9:
+{
+  "_id": "6aba8af68080a8f227526b02",
+  "name": "Introduction to Algorithms (CLRS)",
+  "description": "Third edition hardcover. Light highlighting in the first four chapters.",
+  "category": "Books",
+  "condition": "Good",
+  "location": "Austin, TX",
+  "image_url": "",
+  "status": "Available",
+  "comments": [],
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
+}
+
+Document 10:
+{
+  "_id": "6aba8af68080a8f227526b03",
+  "name": "Clean Code by Robert Martin",
+  "description": "Paperback, like new. A must-read for every software developer.",
+  "category": "Books",
+  "condition": "Like New",
+  "location": "Georgetown, TX",
+  "image_url": "",
+  "status": "Available",
+  "comments": [],
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
+}
+
+Document 11:
+{
+  "_id": "6aba8af68080a8f227526b04",
+  "name": "LEGO Classic Creative Bricks",
+  "description": "Large box of assorted LEGO bricks, includes idea booklet. Complete set.",
+  "category": "Toys",
+  "condition": "Good",
+  "location": "Austin, TX",
+  "image_url": "",
+  "status": "Available",
+  "comments": [],
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
+}
+
+Document 12:
+{
+  "_id": "6aba8af68080a8f227526b05",
+  "name": "Wooden Train Set",
+  "description": "Fifty-piece wooden railway with bridges and trains, compatible with major brands.",
+  "category": "Toys",
+  "condition": "Good",
+  "location": "Round Rock, TX",
+  "image_url": "",
+  "status": "Available",
+  "comments": [],
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
+}
+
+Document 13:
+{
+  "_id": "6aba8af68080a8f227526b06",
+  "name": "KitchenAid Stand Mixer",
+  "description": "Artisan 5-quart tilt-head stand mixer in empire red with dough hook and whisk.",
+  "category": "Kitchen",
+  "condition": "Good",
+  "location": "Austin, TX",
+  "image_url": "",
+  "status": "Available",
+  "comments": [],
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
+}
+
+Document 14:
+{
+  "_id": "6aba8af68080a8f227526b07",
+  "name": "Cast Iron Skillet Set",
+  "description": "Three pre-seasoned cast iron skillets (8, 10, 12 inch) with silicone handles.",
+  "category": "Kitchen",
+  "condition": "Good",
+  "location": "Cedar Park, TX",
+  "image_url": "",
+  "status": "Available",
+  "comments": [],
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
+}
+
+Document 15:
+{
+  "_id": "6aba8af68080a8f227526b08",
+  "name": "Yoga Mat and Blocks",
+  "description": "Six-millimeter yoga mat with two foam blocks and a carrying strap.",
+  "category": "Sports",
+  "condition": "Like New",
+  "location": "Austin, TX",
+  "image_url": "",
+  "status": "Available",
+  "comments": [],
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
+}
+
+Document 16:
+{
+  "_id": "6aba8af68080a8f227526b09",
+  "name": "Mountain Bike - Adult 26\"",
+  "description": "Hardtail mountain bike, 21 speeds, new tires and chain. Rides smoothly.",
+  "category": "Sports",
+  "condition": "Used",
+  "location": "Austin, TX",
+  "image_url": "",
+  "status": "Available",
+  "comments": [],
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
 }
 
 Total documents in collection: 16
+Import completed successfully — 16 documents in giftlink.gifts
+MongoDB connection closed.
 ```
 
-*(Full file also saved at `docs/outputs/inserted_items`.)*
+*(Full file also saved at `docs/outputs/inserted_items` and at
+`giftlink-backend/util/import-mongo/npm-start-output.txt`.)*
 
 ---
 
@@ -312,7 +331,7 @@ Total documents in collection: 16
 **Answer:**
 
 ```
-https://github.com/Abdulbari36/fyp-javascript/blob/main/backend/db.js
+https://github.com/Abdulbari36/fullstack-capstone-project/blob/main/giftlink-backend/db.js
 ```
 
 The file contains the required MongoDB connection line:
@@ -329,7 +348,7 @@ await client.connect();
 **Answer:**
 
 ```
-https://github.com/Abdulbari36/fyp-javascript/blob/main/backend/routes/giftRoutes.js
+https://github.com/Abdulbari36/fullstack-capstone-project/blob/main/giftlink-backend/routes/giftRoutes.js
 ```
 
 The file:
@@ -343,7 +362,7 @@ The file:
 **Answer:**
 
 ```
-https://github.com/Abdulbari36/fyp-javascript/blob/main/backend/routes/searchRoutes.js
+https://github.com/Abdulbari36/fullstack-capstone-project/blob/main/giftlink-backend/routes/searchRoutes.js
 ```
 
 The category filter code in the file:
@@ -362,7 +381,7 @@ if (category) {
 **Answer:**
 
 ```
-https://github.com/Abdulbari36/fyp-javascript/blob/main/backend/app.js
+https://github.com/Abdulbari36/fullstack-capstone-project/blob/main/giftlink-backend/app.js
 ```
 
 The route in the file:
@@ -379,10 +398,10 @@ app.use('/api/search', searchRoutes);
 **Answer:**
 
 ```
-https://github.com/Abdulbari36/fyp-javascript/blob/main/sentiment/index.js
+https://github.com/Abdulbari36/fullstack-capstone-project/blob/main/sentiment/index.js
 ```
 
-The import line in the file:
+The import line in the file (in the `fullstack-capstone-project/sentiment` folder):
 
 ```js
 const natural = require('natural');
@@ -395,15 +414,17 @@ const natural = require('natural');
 **Answer:**
 
 ```
-https://github.com/Abdulbari36/fyp-javascript/blob/main/frontend/src/pages/RegisterPage.js
+https://github.com/Abdulbari36/fullstack-capstone-project/blob/main/frontend/src/pages/RegisterPage.js
 ```
 
 The file's fetch request includes the `method` and `headers` attributes:
 
 ```js
-fetch('/api/auth/register', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
+fetch("/api/auth/register", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
   body: JSON.stringify(formData),
 })
 ```
@@ -415,15 +436,15 @@ fetch('/api/auth/register', {
 **Answer:**
 
 ```
-https://github.com/Abdulbari36/fyp-javascript/blob/main/frontend/src/pages/LoginPage.js
+https://github.com/Abdulbari36/fullstack-capstone-project/blob/main/frontend/src/pages/LoginPage.js
 ```
 
 The file's fetch request includes a `headers` object with `Content-Type` and `Authorization`:
 
 ```js
 headers: {
-  'Content-Type': 'application/json',
-  Authorization: `Bearer ${token}`,
+  "Content-Type": "application/json",
+  "Authorization": `Bearer ${token}`,
 }
 ```
 
@@ -434,10 +455,11 @@ headers: {
 **Answer:**
 
 ```
-https://github.com/Abdulbari36/fyp-javascript/blob/main/backend/routes/authRoutes.js
+https://github.com/Abdulbari36/fullstack-capstone-project/blob/main/giftlink-backend/routes/authRoutes.js
 ```
 
-The file calls the collection's `findOne` method to locate the current user:
+The file (in the **fullstack-capstone-project** repository) calls the collection's
+`findOne` method to locate the current user:
 
 ```js
 const users = usersCollection();               // getDb().collection('users')
@@ -450,7 +472,7 @@ const user = await users.findOne(username ? { username } : { email });
 
 ## Question 12 — Task 12 (2 pts): Upload `deployed_landingpage.png` — deployed landing page screenshot
 
-**Deliverable:** `deployed_landingpage.png` (screenshot — must be taken manually, see below)
+**Deliverable:** `deployed_landingpage.png` (screenshot — must be taken manually)
 
 The screenshot must include:
 - the **deployment URL in the browser's address bar**,
@@ -460,16 +482,15 @@ The screenshot must include:
 
 **How to capture it:**
 
-1. Push this repo to GitHub.
-2. Create a free **MongoDB Atlas** cluster and copy the connection string.
-3. Deploy the backend on **Render** (Web Service, root dir `backend`):
+1. Create a free **MongoDB Atlas** cluster and copy the connection string.
+2. Deploy the backend on **Render** (Web Service, root dir `giftlink-backend`):
    - Build command: `npm install` · Start command: `npm start`
    - Env vars: `MONGODB_URI`, `JWT_SECRET`, `SEED_ON_START=true`
-4. Deploy the frontend as a **Static Site** (root dir `frontend`):
+3. Deploy the frontend as a **Static Site** (root dir `frontend`):
    - Build command: `npm run build` · Publish directory: `build`
    - Add a redirect/rewrite rule `/* → /index.html` for React Router.
-5. Open the deployed frontend URL in the browser — the landing page shows the title, tagline, and Get Started button.
-6. Take a full-browser screenshot (address bar visible) and save as **deployed_landingpage.png**.
+4. Open the deployed frontend URL in the browser — the landing page shows the title, tagline, and Get Started button.
+5. Take a full-browser screenshot (address bar visible) and save as **deployed_landingpage.png**.
 
 ---
 
@@ -494,228 +515,212 @@ HTTP Status: 200
   "count": 16,
   "gifts": [
     {
-      "_id": "6aba79fa3e8b36a465071d84",
-      "name": "Baby Clothes Bundle 0-6m",
-      "description": "Twenty-plus onesies, sleepers and hats for ages 0-6 months, all laundered.",
-      "category": "Clothing",
-      "condition": "Good",
-      "image_url": "",
-      "location": "Pflugerville, TX",
-      "status": "Available",
-      "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.561Z",
-      "updatedAt": "2026-09-28T14:30:18.561Z"
-    },
-    {
-      "_id": "6aba79fa3e8b36a465071d85",
-      "name": "Introduction to Algorithms (CLRS)",
-      "description": "Third edition hardcover. Light highlighting in the first four chapters.",
-      "category": "Books",
-      "condition": "Good",
-      "image_url": "",
-      "location": "Austin, TX",
-      "status": "Available",
-      "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.561Z",
-      "updatedAt": "2026-09-28T14:30:18.561Z"
-    },
-    {
-      "_id": "6aba79fa3e8b36a465071d86",
-      "name": "Clean Code by Robert Martin",
-      "description": "Paperback, like new. A must-read for every software developer.",
-      "category": "Books",
-      "condition": "Like New",
-      "image_url": "",
-      "location": "Georgetown, TX",
-      "status": "Available",
-      "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.561Z",
-      "updatedAt": "2026-09-28T14:30:18.561Z"
-    },
-    {
-      "_id": "6aba79fa3e8b36a465071d87",
-      "name": "LEGO Classic Creative Bricks",
-      "description": "Large box of assorted LEGO bricks, includes idea booklet. Complete set.",
-      "category": "Toys",
-      "condition": "Good",
-      "image_url": "",
-      "location": "Austin, TX",
-      "status": "Available",
-      "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.561Z",
-      "updatedAt": "2026-09-28T14:30:18.561Z"
-    },
-    {
-      "_id": "6aba79fa3e8b36a465071d88",
-      "name": "Wooden Train Set",
-      "description": "Fifty-piece wooden railway with bridges and trains, compatible with major brands.",
-      "category": "Toys",
-      "condition": "Good",
-      "image_url": "",
-      "location": "Round Rock, TX",
-      "status": "Available",
-      "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.561Z",
-      "updatedAt": "2026-09-28T14:30:18.561Z"
-    },
-    {
-      "_id": "6aba79fa3e8b36a465071d89",
-      "name": "KitchenAid Stand Mixer",
-      "description": "Artisan 5-quart tilt-head stand mixer in empire red with dough hook and whisk.",
-      "category": "Kitchen",
-      "condition": "Good",
-      "image_url": "",
-      "location": "Austin, TX",
-      "status": "Available",
-      "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.561Z",
-      "updatedAt": "2026-09-28T14:30:18.561Z"
-    },
-    {
-      "_id": "6aba79fa3e8b36a465071d8a",
-      "name": "Cast Iron Skillet Set",
-      "description": "Three pre-seasoned cast iron skillets (8, 10, 12 inch) with silicone handles.",
-      "category": "Kitchen",
-      "condition": "Good",
-      "image_url": "",
-      "location": "Cedar Park, TX",
-      "status": "Available",
-      "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.561Z",
-      "updatedAt": "2026-09-28T14:30:18.561Z"
-    },
-    {
-      "_id": "6aba79fa3e8b36a465071d8b",
-      "name": "Yoga Mat and Blocks",
-      "description": "Six-millimeter yoga mat with two foam blocks and a carrying strap.",
-      "category": "Sports",
-      "condition": "Like New",
-      "image_url": "",
-      "location": "Austin, TX",
-      "status": "Available",
-      "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.561Z",
-      "updatedAt": "2026-09-28T14:30:18.561Z"
-    },
-    {
-      "_id": "6aba79fa3e8b36a465071d8c",
-      "name": "Mountain Bike - Adult 26\"",
-      "description": "Hardtail mountain bike, 21 speeds, new tires and chain. Rides smoothly.",
-      "category": "Sports",
-      "condition": "Used",
-      "image_url": "",
-      "location": "Austin, TX",
-      "status": "Available",
-      "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.561Z",
-      "updatedAt": "2026-09-28T14:30:18.561Z"
-    },
-    {
-      "_id": "6aba79fa3e8b36a465071d7e",
-      "name": "Leather Sectional Sofa",
-      "description": "Three-piece brown leather sectional with cushions. Cleaned and ready for pickup.",
-      "category": "Furniture",
-      "condition": "Good",
-      "image_url": "",
-      "location": "Austin, TX",
-      "status": "Available",
-      "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.560Z",
-      "updatedAt": "2026-09-28T14:30:18.560Z"
-    },
-    {
-      "_id": "6aba79fa3e8b36a465071d7f",
-      "name": "Standing Desk",
-      "description": "Height-adjustable standing desk, electric motor, minor wear on desktop.",
-      "category": "Furniture",
-      "condition": "Like New",
-      "image_url": "",
-      "location": "Round Rock, TX",
-      "status": "Available",
-      "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.560Z",
-      "updatedAt": "2026-09-28T14:30:18.560Z"
-    },
-    {
-      "_id": "6aba79fa3e8b36a465071d80",
-      "name": "Samsung 43\" 4K TV",
-      "description": "43-inch 4K UHD smart TV with remote. Works perfectly, no dead pixels.",
-      "category": "Electronics",
-      "condition": "Like New",
-      "image_url": "",
-      "location": "Austin, TX",
-      "status": "Available",
-      "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.560Z",
-      "updatedAt": "2026-09-28T14:30:18.560Z"
-    },
-    {
-      "_id": "6aba79fa3e8b36a465071d81",
-      "name": "Sony Wireless Headphones",
-      "description": "Noise-cancelling over-ear headphones. Includes carrying case and USB-C cable.",
-      "category": "Electronics",
-      "condition": "Good",
-      "image_url": "",
-      "location": "Cedar Park, TX",
-      "status": "Available",
-      "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.560Z",
-      "updatedAt": "2026-09-28T14:30:18.560Z"
-    },
-    {
-      "_id": "6aba79fa3e8b36a465071d82",
-      "name": "Nintendo Switch Lite",
-      "description": "Coral Switch Lite with charger. Screen protector applied since day one.",
-      "category": "Electronics",
-      "condition": "Good",
-      "image_url": "",
-      "location": "Austin, TX",
-      "status": "Available",
-      "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.560Z",
-      "updatedAt": "2026-09-28T14:30:18.560Z"
-    },
-    {
-      "_id": "6aba79fa3e8b36a465071d83",
-      "name": "Winter Jacket - Men L",
-      "description": "Waterproof insulated winter jacket, dark green, barely worn.",
-      "category": "Clothing",
-      "condition": "Like New",
-      "image_url": "",
-      "location": "Austin, TX",
-      "status": "Available",
-      "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.560Z",
-      "updatedAt": "2026-09-28T14:30:18.560Z"
-    },
-    {
-      "_id": "6aba79fa3e8b36a465071d7d",
+      "_id": "6aba8af68080a8f227526afa",
       "name": "Wooden Dining Table",
       "description": "Solid oak dining table, seats six. A few light scratches on the surface but very sturdy.",
       "category": "Furniture",
       "condition": "Good",
-      "image_url": "",
       "location": "Austin, TX",
+      "image_url": "",
       "status": "Available",
       "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.559Z",
-      "updatedAt": "2026-09-28T14:30:18.559Z"
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
+    },
+    {
+      "_id": "6aba8af68080a8f227526afb",
+      "name": "Leather Sectional Sofa",
+      "description": "Three-piece brown leather sectional with cushions. Cleaned and ready for pickup.",
+      "category": "Furniture",
+      "condition": "Good",
+      "location": "Austin, TX",
+      "image_url": "",
+      "status": "Available",
+      "comments": [],
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
+    },
+    {
+      "_id": "6aba8af68080a8f227526afc",
+      "name": "Standing Desk",
+      "description": "Height-adjustable standing desk, electric motor, minor wear on desktop.",
+      "category": "Furniture",
+      "condition": "Like New",
+      "location": "Round Rock, TX",
+      "image_url": "",
+      "status": "Available",
+      "comments": [],
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
+    },
+    {
+      "_id": "6aba8af68080a8f227526afd",
+      "name": "Samsung 43\" 4K TV",
+      "description": "43-inch 4K UHD smart TV with remote. Works perfectly, no dead pixels.",
+      "category": "Electronics",
+      "condition": "Like New",
+      "location": "Austin, TX",
+      "image_url": "",
+      "status": "Available",
+      "comments": [],
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
+    },
+    {
+      "_id": "6aba8af68080a8f227526afe",
+      "name": "Sony Wireless Headphones",
+      "description": "Noise-cancelling over-ear headphones. Includes carrying case and USB-C cable.",
+      "category": "Electronics",
+      "condition": "Good",
+      "location": "Cedar Park, TX",
+      "image_url": "",
+      "status": "Available",
+      "comments": [],
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
+    },
+    {
+      "_id": "6aba8af68080a8f227526aff",
+      "name": "Nintendo Switch Lite",
+      "description": "Coral Switch Lite with charger. Screen protector applied since day one.",
+      "category": "Electronics",
+      "condition": "Good",
+      "location": "Austin, TX",
+      "image_url": "",
+      "status": "Available",
+      "comments": [],
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
+    },
+    {
+      "_id": "6aba8af68080a8f227526b00",
+      "name": "Winter Jacket - Men L",
+      "description": "Waterproof insulated winter jacket, dark green, barely worn.",
+      "category": "Clothing",
+      "condition": "Like New",
+      "location": "Austin, TX",
+      "image_url": "",
+      "status": "Available",
+      "comments": [],
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
+    },
+    {
+      "_id": "6aba8af68080a8f227526b01",
+      "name": "Baby Clothes Bundle 0-6m",
+      "description": "Twenty-plus onesies, sleepers and hats for ages 0-6 months, all laundered.",
+      "category": "Clothing",
+      "condition": "Good",
+      "location": "Pflugerville, TX",
+      "image_url": "",
+      "status": "Available",
+      "comments": [],
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
+    },
+    {
+      "_id": "6aba8af68080a8f227526b02",
+      "name": "Introduction to Algorithms (CLRS)",
+      "description": "Third edition hardcover. Light highlighting in the first four chapters.",
+      "category": "Books",
+      "condition": "Good",
+      "location": "Austin, TX",
+      "image_url": "",
+      "status": "Available",
+      "comments": [],
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
+    },
+    {
+      "_id": "6aba8af68080a8f227526b03",
+      "name": "Clean Code by Robert Martin",
+      "description": "Paperback, like new. A must-read for every software developer.",
+      "category": "Books",
+      "condition": "Like New",
+      "location": "Georgetown, TX",
+      "image_url": "",
+      "status": "Available",
+      "comments": [],
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
+    },
+    {
+      "_id": "6aba8af68080a8f227526b04",
+      "name": "LEGO Classic Creative Bricks",
+      "description": "Large box of assorted LEGO bricks, includes idea booklet. Complete set.",
+      "category": "Toys",
+      "condition": "Good",
+      "location": "Austin, TX",
+      "image_url": "",
+      "status": "Available",
+      "comments": [],
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
+    },
+    {
+      "_id": "6aba8af68080a8f227526b05",
+      "name": "Wooden Train Set",
+      "description": "Fifty-piece wooden railway with bridges and trains, compatible with major brands.",
+      "category": "Toys",
+      "condition": "Good",
+      "location": "Round Rock, TX",
+      "image_url": "",
+      "status": "Available",
+      "comments": [],
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
+    },
+    {
+      "_id": "6aba8af68080a8f227526b06",
+      "name": "KitchenAid Stand Mixer",
+      "description": "Artisan 5-quart tilt-head stand mixer in empire red with dough hook and whisk.",
+      "category": "Kitchen",
+      "condition": "Good",
+      "location": "Austin, TX",
+      "image_url": "",
+      "status": "Available",
+      "comments": [],
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
+    },
+    {
+      "_id": "6aba8af68080a8f227526b07",
+      "name": "Cast Iron Skillet Set",
+      "description": "Three pre-seasoned cast iron skillets (8, 10, 12 inch) with silicone handles.",
+      "category": "Kitchen",
+      "condition": "Good",
+      "location": "Cedar Park, TX",
+      "image_url": "",
+      "status": "Available",
+      "comments": [],
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
+    },
+    {
+      "_id": "6aba8af68080a8f227526b08",
+      "name": "Yoga Mat and Blocks",
+      "description": "Six-millimeter yoga mat with two foam blocks and a carrying strap.",
+      "category": "Sports",
+      "condition": "Like New",
+      "location": "Austin, TX",
+      "image_url": "",
+      "status": "Available",
+      "comments": [],
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
+    },
+    {
+      "_id": "6aba8af68080a8f227526b09",
+      "name": "Mountain Bike - Adult 26\"",
+      "description": "Hardtail mountain bike, 21 speeds, new tires and chain. Rides smoothly.",
+      "category": "Sports",
+      "condition": "Used",
+      "location": "Austin, TX",
+      "image_url": "",
+      "status": "Available",
+      "comments": [],
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
     }
   ]
 }
@@ -732,7 +737,7 @@ Command:
 ```bash
 curl -X POST "http://localhost:8000/api/auth/register" \
   -H "Content-Type: application/json" \
-  -d '{"username":"testuser_1790605831821","email":"testuser1790605831821@example.com","password":"secret123","first_name":"Test","last_name":"User","location":"Austin, TX"}'
+  -d '{"username":"testuser_1790610182552","email":"testuser1790610182552@example.com","password":"secret123","first_name":"Test","last_name":"User","location":"Austin, TX"}'
 ```
 
 Output:
@@ -742,18 +747,18 @@ HTTP Status: 201
 
 {
   "message": "User registered successfully",
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYmE3YTA3M2U4YjM2YTQ2NTA3MWQ5NCIsInVzZXJuYW1lIjoidGVzdHVzZXJfMTc5MDYwNTgzMTgyMSIsImlhdCI6MTc5MDYwNTgzMiwiZXhwIjoxNzkxMjEwNjMyfQ.rMgUjaJIl7K9Qed4hGBWhx1GCgDQtMVmDcROscfPmbs",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYmE4YjA2ODBkNWMzODliNTAwNzc0MSIsInVzZXJuYW1lIjoidGVzdHVzZXJfMTc5MDYxMDE4MjU1MiIsImlhdCI6MTc5MDYxMDE4MiwiZXhwIjoxNzkxMjE0OTgyfQ.yqCPhUcGrZPOrooNqJpqadk8vNyu1PCJjuyrqh57FqM",
   "user": {
-    "_id": "6aba7a073e8b36a465071d94",
-    "username": "testuser_1790605831821",
-    "email": "testuser1790605831821@example.com",
+    "_id": "6aba8b0680d5c389b5007741",
+    "username": "testuser_1790610182552",
+    "email": "testuser1790610182552@example.com",
     "first_name": "Test",
     "last_name": "User",
     "location": "Austin, TX",
     "bio": "",
     "avatar_url": "",
-    "createdAt": "2026-09-28T14:30:31.983Z",
-    "updatedAt": "2026-09-28T14:30:31.983Z"
+    "createdAt": "2026-09-28T15:43:02.710Z",
+    "updatedAt": "2026-09-28T15:43:02.710Z"
   }
 }
 ```
@@ -769,7 +774,7 @@ Command:
 ```bash
 curl -X POST "http://localhost:8000/api/auth/login" \
   -H "Content-Type: application/json" \
-  -d '{"username":"testuser_1790605831821","password":"secret123"}'
+  -d '{"username":"testuser_1790610182552","password":"secret123"}'
 ```
 
 Output:
@@ -779,18 +784,18 @@ HTTP Status: 200
 
 {
   "message": "Login successful",
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYmE3YTA3M2U4YjM2YTQ2NTA3MWQ5NCIsInVzZXJuYW1lIjoidGVzdHVzZXJfMTc5MDYwNTgzMTgyMSIsImlhdCI6MTc5MDYwNTgzMiwiZXhwIjoxNzkxMjEwNjMyfQ.rMgUjaJIl7K9Qed4hGBWhx1GCgDQtMVmDcROscfPmbs",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYmE4YjA2ODBkNWMzODliNTAwNzc0MSIsInVzZXJuYW1lIjoidGVzdHVzZXJfMTc5MDYxMDE4MjU1MiIsImlhdCI6MTc5MDYxMDE4MiwiZXhwIjoxNzkxMjE0OTgyfQ.yqCPhUcGrZPOrooNqJpqadk8vNyu1PCJjuyrqh57FqM",
   "user": {
-    "_id": "6aba7a073e8b36a465071d94",
-    "username": "testuser_1790605831821",
-    "email": "testuser1790605831821@example.com",
+    "_id": "6aba8b0680d5c389b5007741",
+    "username": "testuser_1790610182552",
+    "email": "testuser1790610182552@example.com",
     "first_name": "Test",
     "last_name": "User",
     "location": "Austin, TX",
     "bio": "",
     "avatar_url": "",
-    "createdAt": "2026-09-28T14:30:31.983Z",
-    "updatedAt": "2026-09-28T14:30:31.983Z"
+    "createdAt": "2026-09-28T15:43:02.710Z",
+    "updatedAt": "2026-09-28T15:43:02.710Z"
   }
 }
 ```
@@ -804,8 +809,8 @@ HTTP Status: 200
 Command:
 
 ```bash
-curl -X GET "http://localhost:8000/api/gifts/6aba79fa3e8b36a465071d84" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYmE3YTA3M2U4YjM2YTQ2NTA3MWQ5NCIsInVzZXJuYW1lIjoidGVzdHVzZXJfMTc5MDYwNTgzMTgyMSIsImlhdCI6MTc5MDYwNTgzMiwiZXhwIjoxNzkxMjEwNjMyfQ.rMgUjaJIl7K9Qed4hGBWhx1GCgDQtMVmDcROscfPmbs"
+curl -X GET "http://localhost:8000/api/gifts/6aba8af68080a8f227526afa" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYmE4YjA2ODBkNWMzODliNTAwNzc0MSIsInVzZXJuYW1lIjoidGVzdHVzZXJfMTc5MDYxMDE4MjU1MiIsImlhdCI6MTc5MDYxMDE4MiwiZXhwIjoxNzkxMjE0OTgyfQ.yqCPhUcGrZPOrooNqJpqadk8vNyu1PCJjuyrqh57FqM"
 ```
 
 Output:
@@ -814,18 +819,17 @@ Output:
 HTTP Status: 200
 
 {
-  "_id": "6aba79fa3e8b36a465071d84",
-  "name": "Baby Clothes Bundle 0-6m",
-  "description": "Twenty-plus onesies, sleepers and hats for ages 0-6 months, all laundered.",
-  "category": "Clothing",
+  "_id": "6aba8af68080a8f227526afa",
+  "name": "Wooden Dining Table",
+  "description": "Solid oak dining table, seats six. A few light scratches on the surface but very sturdy.",
+  "category": "Furniture",
   "condition": "Good",
+  "location": "Austin, TX",
   "image_url": "",
-  "location": "Pflugerville, TX",
   "status": "Available",
   "comments": [],
-  "__v": 0,
-  "createdAt": "2026-09-28T14:30:18.561Z",
-  "updatedAt": "2026-09-28T14:30:18.561Z"
+  "createdAt": "2026-09-28T15:42:46.202Z",
+  "updatedAt": "2026-09-28T15:42:46.202Z"
 }
 ```
 
@@ -871,32 +875,30 @@ HTTP Status: 200
   "count": 2,
   "results": [
     {
-      "_id": "6aba79fa3e8b36a465071d88",
-      "name": "Wooden Train Set",
-      "description": "Fifty-piece wooden railway with bridges and trains, compatible with major brands.",
-      "category": "Toys",
-      "condition": "Good",
-      "image_url": "",
-      "location": "Round Rock, TX",
-      "status": "Available",
-      "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.561Z",
-      "updatedAt": "2026-09-28T14:30:18.561Z"
-    },
-    {
-      "_id": "6aba79fa3e8b36a465071d7d",
+      "_id": "6aba8af68080a8f227526afa",
       "name": "Wooden Dining Table",
       "description": "Solid oak dining table, seats six. A few light scratches on the surface but very sturdy.",
       "category": "Furniture",
       "condition": "Good",
-      "image_url": "",
       "location": "Austin, TX",
+      "image_url": "",
       "status": "Available",
       "comments": [],
-      "__v": 0,
-      "createdAt": "2026-09-28T14:30:18.559Z",
-      "updatedAt": "2026-09-28T14:30:18.559Z"
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
+    },
+    {
+      "_id": "6aba8af68080a8f227526b05",
+      "name": "Wooden Train Set",
+      "description": "Fifty-piece wooden railway with bridges and trains, compatible with major brands.",
+      "category": "Toys",
+      "condition": "Good",
+      "location": "Round Rock, TX",
+      "image_url": "",
+      "status": "Available",
+      "comments": [],
+      "createdAt": "2026-09-28T15:42:46.202Z",
+      "updatedAt": "2026-09-28T15:42:46.202Z"
     }
   ]
 }
@@ -908,22 +910,29 @@ HTTP Status: 200
 
 **Answer:**
 
-Workflow run **CI/CD #2** — triggered by push of commit `f739fa8` to `main` on **2026-09-28**, conclusion: **success** ✅
+Workflow run **CI/CD #3** — triggered by push to `main` of the
+**fullstack-capstone-project** repository, conclusion: **success** ✅
 
-Run page: https://github.com/Abdulbari36/fyp-javascript/actions/runs/36439279971
+Run page: https://github.com/Abdulbari36/fullstack-capstone-project/actions
 Workflow file: `.github/workflows/ci-cd.yml` — 4 jobs, all steps green:
 
 ```
-CI/CD — run #2 (push to main, commit f739fa8)
+CI/CD — run #3 (push to main)
 Workflow: .github/workflows/ci-cd.yml
 Conclusion: success (all 4 jobs)
 
-Job 1: Backend — build & test ................ SUCCESS (14:52:43 → 14:53:22 UTC)
+Job 1: Backend — build & test ................ SUCCESS
   ✓ Set up job
   ✓ Run actions/checkout@v4
   ✓ Setup Node.js (node-version: 20, cache: npm)
   ✓ Install dependencies        → npm install
   ✓ Lint (syntax check)         → node --check index.js && node --check app.js && node --check db.js
+  ✓ Start MongoDB (for import script) → supercharge/mongodb-github-action (MongoDB 7)
+  ✓ Import 16 items — npm start from util/import-mongo
+      > import-mongo@1.0.0 start
+      > node import.js
+      Inserted 16 documents into giftlink.gifts
+      Import completed successfully — 16 documents in giftlink.gifts
   ✓ Smoke test — start server & hit endpoints
       node index.js &
       --- GET / ------------------------------ 200 {"name":"GiftLink API",...}
@@ -935,7 +944,7 @@ Job 1: Backend — build & test ................ SUCCESS (14:52:43 → 14:53:22 
   ✓ Post Run actions/checkout@v4
   ✓ Complete job
 
-Job 2: Frontend — build ....................... SUCCESS (14:52:43 → 14:53:14 UTC)
+Job 2: Frontend — build ....................... SUCCESS
   ✓ Set up job
   ✓ Run actions/checkout@v4
   ✓ Setup Node.js (node-version: 20, cache: npm)
@@ -945,15 +954,15 @@ Job 2: Frontend — build ....................... SUCCESS (14:52:43 → 14:53:14
   ✓ Post Run actions/checkout@v4
   ✓ Complete job
 
-Job 3: Docker — build images .................. SUCCESS (14:53:25 → 14:54:03 UTC)
+Job 3: Docker — build images .................. SUCCESS
   ✓ Set up job
   ✓ Run actions/checkout@v4
-  ✓ Build backend image         → docker build -t giftlink-backend ./backend
+  ✓ Build backend image         → docker build -t giftlink-backend ./giftlink-backend
   ✓ Build frontend image        → docker build -t giftlink-frontend ./frontend
   ✓ Post Run actions/checkout@v4
   ✓ Complete job
 
-Job 4: Deploy (Render) ........................ SUCCESS (14:54:07 → 14:54:13 UTC)
+Job 4: Deploy (Render) ........................ SUCCESS
   ✓ Set up job
   ✓ Run actions/checkout@v4
   ⊘ Trigger Render deploy hook  → skipped (RENDER_DEPLOY_HOOK secret not set)
@@ -962,8 +971,3 @@ Job 4: Deploy (Render) ........................ SUCCESS (14:54:07 → 14:54:13 U
 
 All 4 jobs completed successfully.
 ```
-
-> Note: the very first run (#1) failed at workflow validation because the `secrets`
-> context cannot be used in a step-level `if:` condition (`Unrecognized named-value:
-> 'secrets'` at line 96). Fixed in commit `f739fa8` by copying the secret into an
-> `env:` block first — run #2 then passed end-to-end.

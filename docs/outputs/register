@@ -1,26 +1,26 @@
 # Task 14 — cURL: register a user (POST /api/auth/register)
-# Generated: 2026-09-28T14:30:32.013Z
+# Generated: 2026-09-28T15:43:02.734Z
 # Base URL:  http://localhost:8000
 
 $ curl -X POST "http://localhost:8000/api/auth/register" \
   -H "Content-Type: application/json" \
-  -d '{"username":"testuser_1790605831821","email":"testuser1790605831821@example.com","password":"secret123","first_name":"Test","last_name":"User","location":"Austin, TX"}'
+  -d '{"username":"testuser_1790610182552","email":"testuser1790610182552@example.com","password":"secret123","first_name":"Test","last_name":"User","location":"Austin, TX"}'
 
 HTTP Status: 201
 
 {
   "message": "User registered successfully",
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYmE3YTA3M2U4YjM2YTQ2NTA3MWQ5NCIsInVzZXJuYW1lIjoidGVzdHVzZXJfMTc5MDYwNTgzMTgyMSIsImlhdCI6MTc5MDYwNTgzMiwiZXhwIjoxNzkxMjEwNjMyfQ.rMgUjaJIl7K9Qed4hGBWhx1GCgDQtMVmDcROscfPmbs",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYmE4YjA2ODBkNWMzODliNTAwNzc0MSIsInVzZXJuYW1lIjoidGVzdHVzZXJfMTc5MDYxMDE4MjU1MiIsImlhdCI6MTc5MDYxMDE4MiwiZXhwIjoxNzkxMjE0OTgyfQ.yqCPhUcGrZPOrooNqJpqadk8vNyu1PCJjuyrqh57FqM",
   "user": {
-    "_id": "6aba7a073e8b36a465071d94",
-    "username": "testuser_1790605831821",
-    "email": "testuser1790605831821@example.com",
+    "_id": "6aba8b0680d5c389b5007741",
+    "username": "testuser_1790610182552",
+    "email": "testuser1790610182552@example.com",
     "first_name": "Test",
     "last_name": "User",
     "location": "Austin, TX",
     "bio": "",
     "avatar_url": "",
-    "createdAt": "2026-09-28T14:30:31.983Z",
-    "updatedAt": "2026-09-28T14:30:31.983Z"
+    "createdAt": "2026-09-28T15:43:02.710Z",
+    "updatedAt": "2026-09-28T15:43:02.710Z"
   }
 }

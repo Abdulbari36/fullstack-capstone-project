@@ -1,0 +1,11 @@
+{
+  "name": "import-mongo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Task 3 - imports the 16 capstone gift items into MongoDB. Run with: npm start (from giftlink-backend/util/import-mongo)",
+  "main": "import.js",
+  "scripts": {
+    "start": "node import.js"
+  },
+  "license": "MIT"
+}
